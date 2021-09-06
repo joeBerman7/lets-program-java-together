@@ -22,6 +22,7 @@ public class Calculator implements ActionListener{
         frame = new JFrame("Calculator"); // finishing build our frame in the constructor
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // we can close our program on the X button
         frame.setSize(420,530); // size of our frame
+        frame.getContentPane().setBackground(new Color(93,230,127)); //set background color
         frame.setResizable(false); // we couldn'r resize the frame
         frame.setLayout(null); 
 
