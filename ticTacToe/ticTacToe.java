@@ -12,7 +12,7 @@ public class ticTacToe implements ActionListener {
     JPanel buttonPanel = new JPanel(); // creating our buttons panel
     JLabel textField = new JLabel(); // // creating our text label
     JButton[] buttons = new JButton[9]; // we will have 9 buttons so we create an array
-    boolean player1Turn;
+    boolean player1Turn; // desiside who is the player that gonna start, true for the starter
 
     // our constructor
     ticTacToe() { 
@@ -25,10 +25,10 @@ public class ticTacToe implements ActionListener {
         frame.setVisible(true); // we can see our frame
 
         // text settings
-        textField.setBackground(new Color(52,71,159));
-        textField.setForeground(Color.RED);
-        textField.setFont(new Font("Ink Free",Font.BOLD,75));
-        textField.setHorizontalAlignment(JLabel.CENTER);
+        textField.setBackground(new Color(52,71,159)); // background text field
+        textField.setForeground(Color.RED); // set the text color
+        textField.setFont(new Font("Ink Free",Font.BOLD,75)); // set text font
+        textField.setHorizontalAlignment(JLabel.CENTER); // set text location
         textField.setText("Tic-Tac-Toe");
         textField.setOpaque(true);
 
@@ -39,6 +39,7 @@ public class ticTacToe implements ActionListener {
         buttonPanel.setLayout(new GridLayout(3,3));
         buttonPanel.setBackground(new Color(150,150,150));
 
+        // creating our 9 buttons
         for(int i=0; i<9; i++) {
             buttons[i] = new JButton();
             buttonPanel.add(buttons[i]);
@@ -47,6 +48,7 @@ public class ticTacToe implements ActionListener {
             buttons[i].addActionListener(this);
         }
 
+        // combining all togther 
         titlePanel.add(textField);
         frame.add(titlePanel,BorderLayout.NORTH);
         frame.add(buttonPanel);
@@ -58,6 +60,7 @@ public class ticTacToe implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         
+        // running the game it self
         for(int i=0; i<9; i++) {
             if(e.getSource()==buttons[i]) {
                 if(player1Turn) {
@@ -105,8 +108,9 @@ public class ticTacToe implements ActionListener {
     }
 
     public void check() {
-        //check if X win
+        //this method will examine all the wining combination they got
 
+        //check if X win
         if(
             (buttons[0].getText()=="X") &&
             (buttons[1].getText()=="X") &&
@@ -172,7 +176,6 @@ public class ticTacToe implements ActionListener {
         }
 
         // check if O win
-
         if(
             (buttons[0].getText()=="O") &&
             (buttons[1].getText()=="O") &&
@@ -240,28 +243,31 @@ public class ticTacToe implements ActionListener {
     }
 
     public void xWins(int a, int b, int c) {
+        // select wining buttons
         buttons[a].setBackground(Color.GREEN);
         buttons[b].setBackground(Color.GREEN);
         buttons[c].setBackground(Color.GREEN);
 
+        //diasable game to continue
         for(int i=0; i<9; i++) {
             buttons[i].setEnabled(false);
         }
 
-        textField.setText("X wins!!! :)");
+        textField.setText("X wins!!! :)"); // wining text :)
     }
 
     public void oWins(int a, int b, int c) {
-
+        // select wining buttons
         buttons[a].setBackground(Color.GREEN);
         buttons[b].setBackground(Color.GREEN);
         buttons[c].setBackground(Color.GREEN);
 
+        //diasable game to continue
         for(int i=0; i<9; i++) {
             buttons[i].setEnabled(false);
         }
 
-        textField.setText("O wins!!! :)");
+        textField.setText("O wins!!! :)"); // wining text :)
     }
         
 }
