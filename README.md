@@ -7,7 +7,7 @@ Welcome to the **Let's Program Java Together** repository! This repository conta
 ### 1. **AudioPlayer 🎶**
 A simple Java-based audio player that allows users to play audio files.
 
-- **Technologies Used**: Java Swing, Java Sound API
+- **Technologies Used**: Java, Java Sound API
 - **Features**:
   - Play, pause, and stop audio files.
   - Volume control and track navigation.
@@ -15,7 +15,7 @@ A simple Java-based audio player that allows users to play audio files.
 ### 2. **Calculator ➗**
 A basic calculator application that performs basic arithmetic operations.
 
-- **Technologies Used**: Java Swing
+- **Technologies Used**: Java
 - **Features**:
   - Addition, subtraction, multiplication, and division.
   - Clear and reset functionality.
@@ -23,7 +23,7 @@ A basic calculator application that performs basic arithmetic operations.
 ### 3. **MortgageCalculatorGUI 💰**
 A graphical user interface (GUI)-based mortgage calculator to calculate monthly mortgage payments.
 
-- **Technologies Used**: Java Swing
+- **Technologies Used**: Java
 - **Features**:
   - Calculate monthly payments based on principal, interest rate, and loan term.
   - User-friendly interface with input validation.
@@ -31,7 +31,7 @@ A graphical user interface (GUI)-based mortgage calculator to calculate monthly 
 ### 4. **SnakeGame 🐍**
 A classic snake game where the player controls a snake to eat food and grow longer while avoiding walls and collisions with itself.
 
-- **Technologies Used**: Java Swing, Java AWT
+- **Technologies Used**: Java
 - **Features**:
   - Score tracking and game-over conditions.
   - Adjustable speed settings and restart option.
@@ -39,7 +39,7 @@ A classic snake game where the player controls a snake to eat food and grow long
 ### 5. **TicTacToe ❌⭕**
 A simple implementation of the classic Tic-Tac-Toe game for two players.
 
-- **Technologies Used**: Java Swing
+- **Technologies Used**: Java
 - **Features**:
   - Playable on a 3x3 grid.
   - Interactive game loop with player input.
